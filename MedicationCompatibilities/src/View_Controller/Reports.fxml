@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ReportsController">
+   <children>
+      <Label layoutX="255.0" layoutY="63.0" prefHeight="17.0" prefWidth="210.0" text="Compatibility List by Solution">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="timestamp" focusTraversable="false" layoutX="3.0" layoutY="444.0" prefHeight="27.0" prefWidth="726.0" />
+      <Button fx:id="returnButton" layoutX="14.0" layoutY="506.0" mnemonicParsing="false" onAction="#returnButtonClicked" text="Return" />
+      <TableView fx:id="d5Table" layoutX="3.0" layoutY="84.0" prefHeight="360.0" prefWidth="121.0">
+        <columns>
+          <TableColumn fx:id="d5wColumn" onEditStart="#PopulateReportD5WTable" prefWidth="120.33333587646484" text="Dextrose 5%" />
+        </columns>
+      </TableView>
+      <TableView fx:id="nsTable" layoutX="124.0" layoutY="84.0" prefHeight="360.0" prefWidth="121.0">
+         <columns>
+            <TableColumn fx:id="nsColumn" onEditStart="#PopulateReportNSTable" prefWidth="120.33333587646484" text="Normal Saline" />
+         </columns>
+      </TableView>
+      <TableView fx:id="halfNsTable" layoutX="245.0" layoutY="84.0" prefHeight="360.0" prefWidth="121.0">
+         <columns>
+            <TableColumn fx:id="halfNsColumn" onEditStart="#PopulateReportHalfNSTable" prefWidth="120.33333587646484" text="1/2 Normal Saline" />
+         </columns>
+      </TableView>
+      <TableView fx:id="lrTable" layoutX="366.0" layoutY="84.0" prefHeight="360.0" prefWidth="121.0">
+         <columns>
+            <TableColumn fx:id="lrColumn" onEditStart="#PopulateReportLRTable" prefWidth="120.33333587646484" text="Lactated Ringers" />
+         </columns>
+      </TableView>
+      <TableView fx:id="d10Table" layoutX="487.0" layoutY="84.0" prefHeight="360.0" prefWidth="121.0">
+         <columns>
+            <TableColumn fx:id="d10wColumn" onEditStart="#PopulateReportD10WTable" prefWidth="120.33333587646484" text="Dextrose 10%" />
+         </columns>
+      </TableView>
+      <TableView fx:id="h2oTable" layoutX="608.0" layoutY="84.0" prefHeight="360.0" prefWidth="121.0">
+         <columns>
+            <TableColumn fx:id="h2oColumn" onEditStart="#PopulateReportH2OTable" prefWidth="120.33333587646484" text="Sterile Water" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
